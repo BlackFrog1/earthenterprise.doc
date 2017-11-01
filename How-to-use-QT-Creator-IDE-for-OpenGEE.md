@@ -105,4 +105,4 @@ The same values can be kept as in the **Debug** configuration with the following
 * in the scons commands, _internal=1_ should be changed to _release=1_
 * any step referencing the _NATIVE-DBG-x86\_64_ folder, should be switched to reference the _NATIVE-REL-x86\_64_ folder
 
-[[/images/ReleaseOptions.png|release configuration options]]
+[[/images/Release_Options.png|release configuration options]]
