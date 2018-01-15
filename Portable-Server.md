@@ -96,7 +96,7 @@ Make sure `g++` is set in your `PATH`.
 
 ### Install Python
 
-Download and install [Python](https://www.python.org/downloads/) 2.7 or later.
+Download and install [Python](https://www.python.org/downloads/) the latest Python 2.7 package.
 
 Once you have Python installed, make sure you have `pexpect` and `tornado` installed. E.g.:
 
