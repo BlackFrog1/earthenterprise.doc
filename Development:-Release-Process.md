@@ -89,6 +89,30 @@ Once work on a release has been completed:
     where `X.Y.Z` is the version number and `W` is one more than the last beta
     number.
 
+    The default GitHub release process is not really compatible with git-lfs, 
+    which is used by the earthenterprise repo. It will create source archive
+    files which do not include the actual git-lfs files, instead just the links
+    to them. Therefore, additional steps are required to create the full source
+    plus git-lfs binary files.
+
+    1. Make sure you have a copy of the `build_release_archive.sh` script. It is
+    in the earthenterprise repo and can be downloaded 
+    [here](https://github.com/google/earthenterprise/raw/master/scripts/build_release_archive.sh).
+
+    1. Set execute permissions on the script if necessary `chmod a+x build_release_archive.sh`
+
+    1. Make a temporary directory to contain the files. e.g. `mkdir earthenterprise_5.2.1`
+
+    1. Run script, specifying the release branch from the repo to package. e.g. 
+    `./build_release_archive.sh release_5.2.1`
+
+    1. After the script has run and created the archives `earthenterprise.tar.gz` and `earthenterprise.zip`, 
+    rename them to include the version tag, so that it's clear what the archive contains. e.g. 
+    `mv earthenterprise.tar.gz earthenterprise-5.2.1-6.final.tar.gz`
+
+    1. Edit the release page to upload these 2 additional files. For an example, see [Open GEE 5.2.1 Release](https://github.com/google/earthenterprise/releases/tag/5.2.1-6.final)
+
+
 1. **Merge changes back into master**
 
     Merge the release branch back into master so that any changes made during
