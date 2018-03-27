@@ -95,13 +95,13 @@ Once work on a release has been completed:
     to them. Therefore, additional steps are required to create the full source
     plus git-lfs binary files.
 
-    1. Make sure you have a copy of the `build_release_archive.sh` script. It is
-    in the earthenterprise repo and can be downloaded 
+    1. Make a temporary directory to contain the repo files. e.g. `mkdir earthenterprise_5.2.1; cd earthenterprise_5.2.1`
+   
+    1. Make sure you have a copy of the `build_release_archive.sh` script in the temporary directory. It is
+    in the earthenterprise repo or can be downloaded 
     [here](https://github.com/google/earthenterprise/raw/master/scripts/build_release_archive.sh).
 
     1. Set execute permissions on the script if necessary `chmod a+x build_release_archive.sh`
-
-    1. Make a temporary directory to contain the files. e.g. `mkdir earthenterprise_5.2.1`
 
     1. Run script, specifying the release branch from the repo to package. e.g. 
     `./build_release_archive.sh release_5.2.1`
