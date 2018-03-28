@@ -50,7 +50,7 @@ Once work on a release has been completed:
     1. Update earthenterprise/docs/geedocs/index.html to indicate that the new
         version is now the current version.
     1. Update all edited or new docs to include the current year in the copyright notice. Example:
-if the year of the update is 2018, Change '2016-2017' to '2016-2018'.
+if the year of the update is 2018 and copyright year notice was '2016-2017' change it to '2016-2018'.
 
 1. **Update Supported Platforms**
 
