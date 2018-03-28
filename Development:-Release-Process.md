@@ -33,6 +33,8 @@ Once work on a release has been completed:
     - earth_enterprise/src/version.txt
     - earth_enterprise/src/fusion/portableglobe/cutter/cgi-bin/geecheck_tests/common.py
     - earth_enterprise/src/installer/common.sh (2 places)
+    - earth_enterprise/BUILD.md 
+    - earth_enterprise/Upgrade.md (if applicable)
 
 1. **Update documentation**
 
