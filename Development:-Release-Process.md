@@ -122,6 +122,10 @@ if the year of the update is 2018 and copyright year notice was '2016-2017' chan
     the release are included in master.  This may involve resolving some merge
     conflicts if other work has already been merged into master.
 
+    If the next step (Copy docs for next release) has already been done, also
+    merge any documentation changes made during the release to the documentation
+    for the next version.
+
 1. **Copy docs for next release**
 
     This step can be done on master at any point after the release notes and
