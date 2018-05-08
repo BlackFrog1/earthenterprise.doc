@@ -59,6 +59,10 @@ Run the following to get an explanation of all available customizations:
 
 `sudo ./install_server.sh -h`
 
+### Install Run-time Requirements
+
+Install the Python `PIL.Image` module. On Ubuntu you can install the `python-pil` package, on Red Hat platforms—`python-imaging`.
+
 ## **Installing Tutorial Data**
 To install Tutorial Data after installing Fusion, run the following command:
 
