@@ -141,7 +141,15 @@ if the year of the update is 2018 and copyright year notice was '2016-2017' chan
 
     1. Edit earthenterprise/docs/geedocs/index.html to add new entry for the new
      version to the head of the list. Also indicate that this version is under development.
-    1. Link manual to the newest development documents:
+    1. Update symlinks to the newest development documents:
+
+        ```bash
+        cd docs/geedocs
+        rm answer art css
+        ln -s 5.2.1/answer answer
+        ln -s 5.2.1/art art
+        ln -s 5.2.1/css css
+        ```
 
         ```bash
         cd earth_enterprise/docs/landing_page
