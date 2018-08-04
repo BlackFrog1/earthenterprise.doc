@@ -21,28 +21,37 @@
     * Python
     * Python pexpect installed
     * Swig with support for Python
-    * g++
+    * g++ (4.8 or later)
 
 ## Run-time prerequisites:
 
     * Python
     * Python tornado installed
+    * Python Imaging Library (PIL) installed
 
 
 # Portable Server on Linux
 
 ## Building on Linux
 
-Make sure you have Python, the `pexpect` Pip package, as well as `tornado`, g++, and Swig with Python support installed.  
+Make sure you have Python, the `pexpect` Pip package, as well as `tornado`, g++, and Swig with Python support installed.
 
-On Ubuntu:
+### Getting a Build Environment
+
+#### On Ubuntu:
 
     sudo apt-get install g++ python python-pexpect python-tornado libpython-dev swig python-psycopg2
 
-On CentOS/RHEL:
+#### On CentOS/RHEL:
 
     sudo yum -y install gcc-c++ python python-pip python-tornado swig python-psycopg2
     sudo pip install pexpect
+
+If you're running an old version of a Red Hat distribution, such as Cent OS or RHEL 6, the packaged `g++` compiler will be too old.  Enable the EPEL package repository, and install `devtoolset2` to get a more recent compiler:
+
+    sudo yum install devtoolset-2-toolchain
+
+### Building
 
 Run
 
