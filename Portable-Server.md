@@ -88,7 +88,9 @@ You can edit `portableserver-linux-5.1.3-20170412/server/portable.cfg` and `port
 
 ## Building on Windows
 
-** Note: ** It is important to ensure `g++` and `python` versions used are both 32 bit or both 64 bit.  Mixing them will lead to compilation/link errors which are not immediately obvious.  If you want to build a 64 bit version of portable server, you must install the 64 bit versions of g++ and python.
+**Note:** It is important to ensure `g++` and `python` versions used are both 32 bit or both 64 bit.  Mixing them will lead to compilation/link errors which are not immediately obvious.
+
+If you want to build a 64 bit version of portable server, you must install the 64 bit versions of g++ and python.
 
 ### Install a g++ Compiler
 
