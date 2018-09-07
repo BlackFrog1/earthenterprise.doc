@@ -88,11 +88,11 @@ You can edit `portableserver-linux-5.1.3-20170412/server/portable.cfg` and `port
 
 ## Building on Windows
 
+** Note: ** It is important to ensure `g++` and `python` versions used are both 32 bit or both 64 bit.  Mixing them will lead to compilation/link errors which are not immediately obvious.  If you want to build a 64 bit version of portable server, you must install the 64 bit versions of g++ and python.
+
 ### Install a g++ Compiler
 
-You can install [MinGW](http://www.mingw.org/) with a g++ compiler, or run the build from a Git-BASH or Git-Cmd shell from [Git-Scm](https://git-scm.com/), which should come with `g++`.
-
-_Note: Git-BASH may have a 64-bit MinGW, and may not work by default._
+You can install [MinGW](https://sourceforge.net/projects/mingw-w64/) with a g++ compiler.  Ensure the architecture you select to install matches your desired build architecture.
 
 Make sure `g++` is set in your `PATH`.
 
@@ -105,7 +105,7 @@ Make sure `g++` is set in your `PATH`.
 
 ### Install Python
 
-Download and install [Python](https://www.python.org/downloads/) the latest Python 2.7 package.
+Download and install [Python](https://www.python.org/downloads/) the latest Python 2.7 package.  Ensure the python architecture matches your desired build architecture.
 
 Once you have Python installed, make sure you have `pexpect` and `tornado` installed. E.g.:
 
@@ -118,8 +118,6 @@ Add the directory you installed Python in to your `PATH`.
 ### Build Portable Server
 
 Open a command prompt with `g++`, `swig` and `python` in your `PATH`.
-
-_Note: Git-BASH may have a 64-bit MinGW, and may not work by default._
 
 E.g., on Windows your `PATH` may look like:
 
