@@ -30,7 +30,6 @@ Once work on a release has been completed:
     Commit these updates to the release branch.
 
     - earth_enterprise/src/support/geecheck/geecheck.pl (2 places)
-    - earth_enterprise/src/version.txt
     - earth_enterprise/src/fusion_version.txt
     - earth_enterprise/src/fusion/portableglobe/cutter/cgi-bin/geecheck_tests/common.py
     - earth_enterprise/BUILD.md 
