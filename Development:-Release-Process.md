@@ -77,7 +77,16 @@ if the year of the update is 2018 and copyright year notice was '2016-2017' chan
     pre-release should be generated and regression testing should be performed
     on the pre-release. The tag for the new pre-release should be
     `X.Y.Z-W.beta` where `X.Y.Z` is the version number and `W` is one more than
-    the previous beta number.
+    the previous beta number. 
+
+    Use git annotated tags for creating tags, so we can keep track of who made the
+    tag. (If you don't use annotated tags, then GitHub will report the author of the
+    tag as the author of the last commit, rather than the user who created the tag.)
+    
+    Example:
+    ```
+    $ git -a 5.2.4-2.beta -m "Open GEE 5.2.4 Beta 2"
+    ```
 
 1. **Update release notes**
 
@@ -89,7 +98,12 @@ if the year of the update is 2018 and copyright year notice was '2016-2017' chan
     For instructions, see <https://help.github.com/articles/creating-releases/>.
     Be sure to specify the release branch. The tag should be `X.Y.Z-W.final`
     where `X.Y.Z` is the version number and `W` is one more than the last beta
-    number.
+    number. Again, use annotated tags as shown above.
+
+    Example:
+    ```
+    $ git -a 5.2.3-4.final -m "Open GEE 5.2.3 Final"
+    ```
 
     The default GitHub release process is not really compatible with git-lfs, 
     which is used by the earthenterprise repo. It will create source archive
