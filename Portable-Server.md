@@ -94,7 +94,7 @@ If you want to build a 64 bit version of portable server, you must install the 6
 
 ### Install a g++ Compiler
 
-You can install [MinGW](https://sourceforge.net/projects/mingw-w64/) with a g++ compiler.  Ensure the architecture you select to install matches your desired build architecture.
+You can install [MinGW](https://sourceforge.net/projects/mingw-w64/) with a g++ compiler.  Ensure the architecture you select to install matches your desired build architecture.  If intending to distribute the build to other windows systems, be sure to select the `win` threads installation.  Compiling with g++ for posix threads will lead to additional run-time dependencies.
 
 Make sure `g++` is set in your `PATH`.
 
