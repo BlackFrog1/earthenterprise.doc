@@ -92,3 +92,13 @@ This has not been tested, there is no technical reason that it should not work. 
 1. Run the `install_fusion.sh` and `install_server.sh` scripts to install fusion and server.
 
 If you run into problems with the above instructions, please let us know.
+
+## How do I upgrade git to the recommended version for building Google Earth Enterprise?
+On CentOS 6/7 or RHEL 6/7 do the following steps:
+```
+MAJOR_VERSION=$(rpm -qa \*-release | grep -Ei "oracle|redhat|centos" | cut -d"-" -f3)
+wget --no-check-certificate https://centos${MAJOR_VERSION}.iuscommunity.org/ius-release.rpm
+sudo yum install -y ius-release.rpm
+sudo yum remove -y git
+sudo yum install -y git2u
+```
