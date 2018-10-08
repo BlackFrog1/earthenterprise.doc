@@ -152,7 +152,7 @@ if the year of the update is 2018 and copyright year notice was '2016-2017' chan
         cp -rp 5.2.0 5.2.1
         ```
 
-    1. Edit earthenterprise/docs/geedocs/index.html to add new entry for the new
+    1. Edit earthenterprise/docs/_data/versions.yml to add new entry for the new
      version to the head of the list. Also indicate that this version is under development.
     1. Update symlinks to the newest development documents:
 
