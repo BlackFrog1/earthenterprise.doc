@@ -31,13 +31,35 @@ Once work on a release has been completed:
     Use the principles of [semantic versioning](http://semver.org/) to select
     the new release number.
 
-2. **Create release branch**
+2. **Create the first release candidate tag**
+    Create the first release candidate tag from latest commit on master.
+    The tag should be `X.Y.Z-RC1` where `X.Y.Z` is the version number.
+
+    Use git annotated tags for creating tags, so we can keep track of who made
+    the tag. (If you don't use annotated tags, then GitHub will report
+    the author of the tag as the author of the last commit, rather than the
+    user who created the tag.)
+
+    Example:
+    ```bash
+    $ git checkout master
+    $ git tag -a 5.2.5-RC1 -m "Open GEE 5.2.5 Release candidate 1"
+    $
+    ```
+
+3. **Create release branch**
 
     Create a release branch named `release_X.Y.Z` where `X.Y.Z` is the
-    release number. This branch should point to the last commit on master
-    that will be included in the release.
+    release number. This branch should be based on the RC1 tag you just
+    created in the previous step.
 
-3. **Update version number**
+    Example:
+    ```bash
+    $ git checkout -b release_5.2.5 5.2.5-RC1
+    $
+    ```
+
+4. **Update version number**
 
     The following files need to be updated with the latest version number.
     Commit these updates to the release branch.
@@ -54,7 +76,7 @@ Once work on a release has been completed:
     will be it is a good idea to change these files in master after the release
     branch is created.
 
-4. **Update documentation**
+5. **Update documentation**
 
     Make the following documentation updates and then commit them to the release branch.
 
@@ -71,31 +93,17 @@ Once work on a release has been completed:
        copyright notice. Example: if the year of the update is 2018 and copyright
        year notice was '2016-2017' change it to '2016-2018'.
 
-5. **Update Supported Platforms**
+6. **Update Supported Platforms**
 
     If necessary, update the supported platforms and versions in _src/fusion/portableglobe/cutter/cgi-bin/geecheck_tests/user_tests/common.py_.
 
-6. **Create the first pre-release in Github**
-
-    Create the first release candidate tag on the newly created release branch.
-    The tag should be `X.Y.Z-RC1` where `X.Y.Z` is the version number.
-
-    Use git annotated tags for creating tags, so we can keep track of who made
-    the tag. (If you don't use annotated tags, then GitHub will report
-    the author of the tag as the author of the last commit, rather than the
-    user who created the tag.)
-
-    Example:
-    ```bash
-    $ git tag -a 5.2.5-RC1 -m "Open GEE 5.2.5 Release candidate 1"
-    $
-    ```
+7. **Create the first pre-release in Github**
 
     Then follow the instructions, at <https://help.github.com/articles/creating-releases/>. Be
     sure to specify the release candidate tag you just created and indicate
     that it is a pre-release.
 
-7. **Create a source archive artifact for the release**
+8. **Create a source archive artifact for the release**
 
     The default GitHub release process is not really compatible with git-lfs,
     which is used by the earthenterprise repo. It will create source archive
@@ -136,7 +144,7 @@ Once work on a release has been completed:
        example, see [Open GEE 5.2.5 Release]
        (https://github.com/google/earthenterprise/releases/tag/5.2.5-714.9)
 
-8. **Build and test release**
+9.  **Build and test release**
 
     Testing should be done on all supported operating systems. The test
     systems should be clean VMs or docker images that have not been used to
@@ -161,12 +169,12 @@ Once work on a release has been completed:
     the tag.  Also follow the same instructions as was followed for creating
     the first release candidate to publish all subsequent release candidates.
 
-9. **Update release notes**
+10. **Update release notes**
 
     Make any last minute changes to the release notes based on changes made
     while testing. Commit any release notes changes to the release branch.
 
-10. **Create the release in Github**
+11. **Create the release in Github**
 
     Once a pre-release candidate is declared good to release then apply a
     release tag which will match the version string outputted from the
@@ -190,7 +198,7 @@ Once work on a release has been completed:
     But this time specify the final release tag you just created and
     do not select 'this release as a pre-release'.
 
-11. **Merge changes back into master**
+12. **Merge changes back into master**
 
     Merge the release branch back into master so that any changes made during
     the release are included in master.  This may involve resolving some
@@ -200,7 +208,7 @@ Once work on a release has been completed:
     also merge any documentation changes made during the release to the
     documentation for the next version.
 
-12. **Copy docs for next release**
+13. **Copy docs for next release**
 
     This step can be done on master at any point after the release notes and
     version number changes have been merged back into master. The main
@@ -235,24 +243,24 @@ Once work on a release has been completed:
         ```
     4. Merge these changes to master.
 
-13. **Update README.md**
+14. **Update README.md**
 
     Update the main README.md page for the Github repo to include a link to the
     latest release and the latest docs.
 
-14. **Announce the release**
+15. **Announce the release**
 
     Write and publish a blog post announcing the new release and highlighting
     some of the major changes. Also announce the release on the Google Earth
     Enterprise Google Group and the Slack channel with a link to the blog post.
 
-15. **Delete pre-release RC tags**
+16. **Delete pre-release RC tags**
 
     This is an optional step but if done it must be done **after** creating
     the final and permanent release tag for the release.  Also, clean up the
     corresponding releases on the release page.
 
-16. **Set alpha tag for next release**
+17. **Set alpha tag for next release**
 
     Once the next version is known then an alpha tag should be set on the master
     branch so builds from master can start using that version
