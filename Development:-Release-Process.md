@@ -32,6 +32,7 @@ Once work on a release has been completed:
     the new release number.
 
 2. **Create the first release candidate tag**
+
     Create the first release candidate tag from latest commit on master.
     The tag should be `X.Y.Z-RC1` where `X.Y.Z` is the version number.
 
