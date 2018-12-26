@@ -14,12 +14,12 @@ releasable build (was not built from a properly created release branch).
 
 To find the version string associated with the head of a particular branch
 check out the branch you want to get the version string from and run the following command:
+```bash
+$ git checkout release_5.2.5
+$ ./earth_enterprise/src/scons/getversion.py -l
+5.2.5-714.9
+```
 
-    ```bash
-    $ git checkout release_5.2.5
-    $ ./earth_enterprise/src/scons/getversion.py -l
-    5.2.5-714.9
-    ```
 You will need to get the version string of a release branch to perform some of the steps below
 
 ### Release Process
