@@ -93,6 +93,11 @@ Once work on a release has been completed:
     5. Update all edited or new docs to include the current year in the
        copyright notice. Example: if the year of the update is 2018 and copyright
        year notice was '2016-2017' change it to '2016-2018'.
+    6. Update README.md to update the Travis-CI badge build to the created branch. See 
+       [![build](https://travis-ci.org/google/earthenterprise.svg?branch=master)]. Change "master" to use the new branch 
+       name.
+
+
 
 6. **Update Supported Platforms**
 
