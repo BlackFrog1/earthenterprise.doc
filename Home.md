@@ -33,6 +33,6 @@ https://groups.google.com/forum/#!forum/google-earth-enterprise
 
 **Slack Chatroom**
 
-Use this link to sign up for the Slack Chatroom where you can chat with developers and users of Open GEE
+Use this link to sign up for the Slack Chatroom where you can chat with developers and users of Open GEE.
 
 http://slack.opengee.org
