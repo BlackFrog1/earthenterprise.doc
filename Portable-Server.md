@@ -20,6 +20,7 @@
 
     * Python
     * Python pexpect installed
+    * Python gitpython installed
     * Swig with support for Python
     * g++ (4.8 or later)
 
@@ -112,7 +113,7 @@ Download and install [Python](https://www.python.org/downloads/) the latest Pyth
 Once you have Python installed, make sure you have `pexpect` and `tornado` installed. E.g.:
 
     cd \Python27\Scripts
-    pip install pexpect tornado
+    pip install pexpect tornado gitpyhton
 
 Add the directory you installed Python in to your `PATH`.
 
